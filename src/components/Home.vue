@@ -4,6 +4,8 @@
   <button v-on:dblclick="dblClicked('Button 2')">Button 2</button>
   <button v-on:click="countIncrease()">Count +</button>
   <h2>{{ count }}</h2>
+  <input type="text" placeholder="Enter your inputs" v-model="data">
+  <h1>{{data}}</h1>
 </template>
 
 <script>
@@ -11,7 +13,8 @@ export default {
   name: "HomePage",
   data(){
     return{
-        count:0
+        count:0,
+        data:0,
     }
   },
   methods: {
