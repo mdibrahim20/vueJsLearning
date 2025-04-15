@@ -1,7 +1,9 @@
 <template>
   <h1>HomePage</h1>
-  <h3>{{ text }}</h3>
-  <div v-html="html1 + html2">
+
+  <div>
+    <h1 :class="{green:colorful}">Class Binding</h1>
+    <button v-on:click="colorful=!colorful">Click Me</button>
   </div>
 
 </template>
@@ -11,9 +13,7 @@ export default {
   name: "HomePage",
   data() {
     return {
-      text:"Md Ibrahim",
-      html1:"<h1>Md Ibrahim Khalil Ullah</h1>",
-      html2:"<h1>Araf Ahmed</h1>",
+      colorful:true,
     }
   }
 }
@@ -26,5 +26,17 @@ h2 {
 }
 h2 {
   font-size: 50px;
+}
+
+.green{
+  background-color: green;
+  padding: 20px;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.red{
+  color: red;
 }
 </style>
