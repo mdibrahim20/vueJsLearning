@@ -6,6 +6,7 @@
     {{ details.email }}
 
 </h1>
+
 <button v-on:click="functionCall()">Click Me</button>
 </template>
 <script>
