@@ -1,21 +1,15 @@
 <template>
-
-    <h1>Ref uses vue</h1>
-    <input type="text" ref="input" />
-    <button v-on:click="getData">Click Me</button>
-
+  <h1>Ref uses vue</h1>
+  <input type="text" ref="input" />
+  <Form></Form>
 </template>
 
 <script>
+import Form from "./FormCompo";
 export default {
   name: "HomePage",
-  methods: {
-    getData() {
-      this.$refs.input.focus();
-      let val = this.$refs.input.value;
-      console.log(val)
-      this.$refs.input.style.color='red';
-    }
+  components: {
+    Form,
   },
 };
 </script>
