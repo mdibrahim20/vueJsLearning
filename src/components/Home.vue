@@ -1,18 +1,18 @@
 <template>
-  <h1>Ref uses vue</h1>
-  <input type="text" ref="input" />
-  <Form></Form>
-  <UserComp data="Ibrahim Khalil" id="test-id"></UserComp>
+  <ChildComp><h1>Ibrahim</h1></ChildComp>
+  <ChildComp><a href="#">www.google.com</a></ChildComp>
+  <ChildComp><img src="https://thafd.bing.com/th/id/OIP.0iqvqUM-_MntTZp4CMBaigHaEK?cb=iwp1&rs=1&pid=ImgDetMain"/></ChildComp>
+  <ChildComp></ChildComp>
 </template>
 
 <script>
-import Form from "./FormCompo";
-import UserComp from "./User.vue";
+
+import ChildComp from "./ChildCom.vue";
 export default {
   name: "HomePage",
   components: {
-    Form,
-    UserComp
+
+    ChildComp
   },
 };
 </script>
