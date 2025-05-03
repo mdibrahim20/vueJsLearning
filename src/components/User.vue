@@ -5,7 +5,9 @@
     <h1>Masud</h1>
     <h1>{{ data }}</h1>
 
-    <h1>Total: {{getResult}} </h1>
+    <h1>Count : {{ count  }} </h1>
+    <button @click="count=count+1">+</button>
+    <button @click="count=count-1">-</button>
   </div>
 </template>
 <script>
@@ -17,19 +19,24 @@ export default {
   },
   data(){
     return{
-        dollar:120,
-        takaVal:100,
-        discount:35
-
+        count:0,
     }
   },
-  computed:{
-    getResult(){
-        return (this.dollar*this.takaVal)-this.discount;
+  watch:{
+    count(val,prev){
+        // if(val>5){
+        //     alert("stop")
+        // }
+        // if(val>5 && val>prev){
+        //     this.count=0;
+        //     alert("value turn to 0")
+        // }
+        if(val>5){
+            alert(prev)
+        }
     }
   }
+
 };
 </script>
 <style scoped></style>
-
-<!-- Computed property: simply for cache works. like if a value will not change for a long time then its being used. when the value will be updated in that case it will automatically re-cache the original one -->
